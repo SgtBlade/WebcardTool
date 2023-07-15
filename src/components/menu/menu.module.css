@@ -1,0 +1,29 @@
+.menu {
+    background-color: #333;
+    color: #e9e9e9;
+    width: 20vw;
+}
+
+.menu__list {
+    list-style: none;
+    text-transform: capitalize;
+    display: flex;
+    flex-flow: column;
+    overflow: scroll;
+    padding: 2rem;
+    height: 100vh;
+    font-size: 2.2rem;
+}
+
+.menu__list::-webkit-scrollbar {
+    display: none;
+}
+
+.menu__item {
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.menu__item:hover {
+    text-decoration: underline;
+}
