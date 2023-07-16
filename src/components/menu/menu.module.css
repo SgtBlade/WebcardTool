@@ -1,8 +1,45 @@
 .menu {
-    background-color: #333;
-    color: #e9e9e9;
-    width: 20vw;
+    background-color: #562135;
+    border-right: solid 1px #fcd1d7;
+    width: 30vw;
+    display: flex;
+    flex-flow: column;
+
+    user-select: none;
+
+    position: relative;
+
+    transition: all .3s ease;
 }
+
+.menu.menu__folded {
+    margin-left: -25vw;
+}
+
+.menu__options {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.5rem;
+
+    border-bottom: solid 1px #fcd1d7;
+}
+
+.menu__options__home {
+    font-size: 2.2rem;
+}
+
+.menu__close {
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+
+.menu.menu__folded .menu__close {
+    transform: rotate(0deg);
+}
+
 
 .menu__list {
     list-style: none;
@@ -11,7 +48,7 @@
     flex-flow: column;
     overflow: scroll;
     padding: 2rem;
-    height: 100vh;
+    flex-grow: 1;
     font-size: 2.2rem;
 }
 
@@ -24,6 +61,32 @@
     margin: 1rem 0;
 }
 
+.menu__item.active{
+    text-decoration: underline;
+}
+
 .menu__item:hover {
     text-decoration: underline;
+}
+
+.activeSet {
+    font-size: 2.2rem;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.activeSet span {
+    width: 100%;
+    text-decoration: underline;
+    text-align: center;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+@media screen and (max-width: 450px) {
+    .menu__options {
+        padding-right: .2rem;
+    } 
 }

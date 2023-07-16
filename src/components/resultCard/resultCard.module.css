@@ -1,0 +1,64 @@
+.card {
+    background-color: #ffe7de;
+
+    width: 100%;
+
+
+    height: 17rem;
+    max-width: 12.5rem;
+
+    margin: 1rem;
+    border-radius: .5rem;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #c3829e;
+}
+
+.cardSubject {
+    text-align: center;
+    user-select: none;
+}
+
+.cardAnswer {
+    border-top: solid 1px #c3829e;
+    width: 80%;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2.8rem;
+}
+
+.cardAnswer.hidden {
+    visibility: hidden;
+}
+
+.difficulty {
+    width: 100%;
+    text-align: center;
+    border-radius: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;  
+}
+
+
+.difficulty.Failed {
+    background-color: #F25378;
+    color: #ffe7de;
+}
+
+.difficulty.Bad {
+    background-color: #FFA7A6;
+    color: #562135;
+}
+
+.difficulty.Okey {
+    background-color: #D4E0EE;
+    color: #562135;
+}
+.difficulty.Easy, .difficulty.Correct {
+    background-color: #B0D0A3;
+    color: #562135;
+}

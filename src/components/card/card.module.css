@@ -1,0 +1,37 @@
+.card {
+    background-color: #ffe7de;
+
+    width: 100%;
+    height: 100%;
+
+
+    max-height: 60rem;
+    max-width: 50rem;
+
+    margin: 2rem;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #c3829e;
+}
+
+.cardSubject {
+    text-align: center;
+    user-select: none;
+}
+
+.cardAnswer {
+    border-top: solid 1px #c3829e;
+    width: 80%;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2.8rem;
+}
+
+.cardAnswer.hidden {
+    visibility: hidden;
+}

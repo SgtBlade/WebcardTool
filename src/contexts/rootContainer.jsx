@@ -4,23 +4,31 @@ const RootContext = createContext();
 
 const RootContainer = ({ children }) => {
   const [data, setData] = useState(false);
-  const [globalError, setGlobalError] = useState()
+  const [activeSet, setActiveSet] = useState(false)
+  const [working, setWorking] = useState(false)
 
   useEffect(() => {
-    if(!data) getData()
+    if (!data) getData()
   });
 
-    const getData = async () => {
-      const response = await fetch('./data/dataset.json')
+  const getData = async () => {
+    try {
+      
+    const response = await fetch('http://localhost:3000/data/dataset.json')
       .then(response => response.json())
-      setData(response);
+    setData(response);
+    }
+    catch(ex) {
+      console.log(ex)
     }
 
-    return (
-      <RootContext.Provider value={{ data: data}}>
-        {children}
-      </RootContext.Provider>
-    );
+  }
+
+  return (
+    <RootContext.Provider value={{ data: data , activeSet: activeSet, setActiveSet: setActiveSet,working:working,setWorking:setWorking}}>
+      {children}
+    </RootContext.Provider>
+  );
 
 };
 

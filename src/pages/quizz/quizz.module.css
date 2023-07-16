@@ -1,0 +1,38 @@
+.container {
+    width: 100%;
+    background-color: #3f0000;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.container.results {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.flashcardWrap {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.mini {
+    transform: scale(0.5);
+}
+
+.flashcardWrap {
+    max-height: 100vh;
+    overflow: scroll;
+}
+
+.flashcardWrap__control {
+    width: 100%;
+}

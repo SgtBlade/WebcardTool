@@ -1,0 +1,67 @@
+.card {
+    background-color: #ffe7de;
+
+    width: 100%;
+
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #c3829e;
+    transition: all .3s ease;
+}
+
+.cardSubject {
+    text-align: center;
+    user-select: none;
+}
+
+.cardSubject span{
+    color: #935972;
+}
+
+.capitalise {
+    text-transform: capitalize;
+}
+
+.card__options {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.5rem;
+}
+
+.cardAnswer.hidden {
+    visibility: hidden;
+}
+
+.response {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -2rem;
+    width: calc(100% + 4rem);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 1rem;
+}
+
+.response.true {
+    background-color: #B0D0A3;
+    color: #562135;
+}
+
+.response.false {
+    color: #ffe7de;
+    background-color: #F25378;
+}
+
+.response p {
+    margin-right: 1rem;
+}

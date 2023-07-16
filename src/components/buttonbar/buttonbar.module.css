@@ -1,0 +1,65 @@
+
+.checkbar{
+    position: absolute;
+    padding: .5rem;
+    bottom: 0;
+    width: 100%;
+}
+
+.checkbar.hidden {
+    visibility: hidden;
+}
+
+.checkbar__list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.checkbar__list__item{
+    padding: 1rem 1.5rem;
+    border-radius: .4rem;
+    margin: .5rem;
+    text-align: center;
+    cursor: pointer;
+    color: #ffe7de;
+    user-select: none;
+    transition: background-color .3 ease;
+}
+
+.checkbar__list__item:nth-of-type(1) {
+    background-color: #F25378;
+}
+
+.checkbar__list__item:nth-of-type(1):active {
+    background-color: #d44365;
+}
+
+.checkbar__list__item:nth-of-type(2) {
+    background-color: #FFA7A6;
+    color: #562135;
+}
+
+.checkbar__list__item:nth-of-type(2):active {
+    background-color: #e28e8d;
+    color: #562135;
+}
+
+.checkbar__list__item:nth-of-type(3) {
+    background-color: #D4E0EE;
+    color: #562135;
+}
+
+.checkbar__list__item:nth-of-type(3):active {
+    background-color: #b3c1d1;
+    color: #562135;
+}
+
+.checkbar__list__item:nth-of-type(4) {
+    background-color: #B0D0A3;
+    color: #562135;
+}
+
+.checkbar__list__item:nth-of-type(4):active {
+    background-color: #94b387;
+    color: #562135;
+}

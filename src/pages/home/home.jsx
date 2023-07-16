@@ -2,8 +2,10 @@ import React from 'react';
 import Menu from '../../components/menu/menu';
 import style from "./home.module.css"
 import { Route, Routes } from 'react-router-dom';
-import ROUTES from '../../consts/index.js';
+import ROUTES from '../../consts';
 import Start from '../start/start';
+import Quizz from '../quizz/quizz';
+import Flashcards from '../flashcards/flashcards';
 
 const Home = () => {
 
@@ -15,6 +17,8 @@ const Home = () => {
 
             <Routes>
                 <Route path={ROUTES.home.path} element={<Start/>} />
+                <Route path={ROUTES.flashcards.path} element={<Flashcards/>}/>
+                <Route path={ROUTES.quizz.path} element={<Quizz/>}/>
             </Routes>
             
         </div>
