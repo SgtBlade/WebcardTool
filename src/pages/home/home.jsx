@@ -19,6 +19,7 @@ const Home = () => {
                 <Route path={ROUTES.home.path} element={<Start/>} />
                 <Route path={ROUTES.flashcards.path} element={<Flashcards/>}/>
                 <Route path={ROUTES.quizz.path} element={<Quizz/>}/>
+                <Route path={'*'} element={<Start/>}/>
             </Routes>
             
         </div>

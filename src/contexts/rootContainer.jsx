@@ -13,8 +13,7 @@ const RootContainer = ({ children }) => {
 
   const getData = async () => {
     try {
-      
-    const response = await fetch('http://localhost:3000/data/dataset.json')
+    const response = await fetch(process.env.REACT_APP_API_URL)
       .then(response => response.json())
     setData(response);
     }

@@ -15,7 +15,6 @@ const Quizzcard = ({ dataset, data, method, addToCompleted }) => {
             if (response === data.back) {
                 setAnswer(true)
                 setTimeout(() => {
-
                     setAnswer(undefined);setReveal(false);
                     setRandomResponses([])
                     if(!reveal)addToCompleted('Correct');
@@ -27,11 +26,14 @@ const Quizzcard = ({ dataset, data, method, addToCompleted }) => {
                 setAnswer(false)
             }
         } else {
-            if (response === data.back) {
+            if (response === data.front) {
                 setAnswer(true)
-                if(!reveal)addToCompleted('Correct')
-                else addToCompleted('Failed')
-                setAnswer(undefined);setReveal(false)
+                setTimeout(() => {
+                    setAnswer(undefined);setReveal(false);
+                    setRandomResponses([])
+                    if(!reveal)addToCompleted('Correct');
+                    else addToCompleted('Failed');
+                }, 1000)
             } else {
                 setAnswer(false)
             }
@@ -116,7 +118,7 @@ const Quizzcard = ({ dataset, data, method, addToCompleted }) => {
                                 key={index}
                                 text={response.front}
                                 action={() => handleResponse(response.front, 'front')}
-                                styleoverride={reveal && response.front === data.front ?{backgroundColor:'#B0D0A3',color:'#562135'}:{}}
+                                styleoverride={(reveal && response.front === data.front) || (answer && response.back === data.back) ?{backgroundColor:'#B0D0A3',color:'#562135'}:{}}
                             />
                         )
                     })
