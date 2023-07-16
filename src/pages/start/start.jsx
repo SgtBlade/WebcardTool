@@ -7,10 +7,10 @@ import { useRootContext } from '../../contexts/rootContainer';
 
 const Start = () => {
 
-    const {working, setWorking} = useRootContext()
+    const { working, setWorking } = useRootContext()
 
     useEffect(() => {
-        if(working)setWorking(false)
+        if (working) setWorking(false)
     })
 
     return (
@@ -19,27 +19,27 @@ const Start = () => {
 
             <div className={style.buttoWrapper}>
                 <Link to={`${ROUTES.flashcards.to}regular`}>
-                    <Button text={'Flashcards regular'}/>
+                    <Button text={'Flashcards regular'} />
                 </Link>
 
                 <Link to={`${ROUTES.flashcards.to}reverse`} className={style.button}>
-                    <Button text={'Flashcards reverse'}/>
+                    <Button text={'Flashcards reverse'} />
                 </Link>
 
                 <Link to={`${ROUTES.flashcards.to}mix`} className={style.button}>
-                    <Button text={'Flashcards mix'}/>
+                    <Button text={'Flashcards mix'} />
                 </Link>
 
                 <Link to={`${ROUTES.quizz.to}regular`} className={style.button}>
-                    <Button text={'Quizz regular'}/>
+                    <Button text={'Quizz regular'} />
                 </Link>
 
                 <Link to={`${ROUTES.quizz.to}reverse`} className={style.button}>
-                    <Button text={'Quizz reverse'}/>
+                    <Button text={'Quizz reverse'} />
                 </Link>
 
                 <Link to={`${ROUTES.quizz.to}mix`} className={style.button}>
-                    <Button text={'Quizz mix'}/>
+                    <Button text={'Quizz mix'} />
                 </Link>
             </div>
 

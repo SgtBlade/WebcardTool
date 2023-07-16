@@ -30,7 +30,7 @@ const Flashcards = () => {
     }, [activeSet])
 
     useEffect(() => {
-        if(!working)setWorking(true)
+        if (!working) setWorking(true)
     })
 
     const setDataseries = (casual = true) => {

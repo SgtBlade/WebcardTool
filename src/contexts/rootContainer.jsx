@@ -13,12 +13,12 @@ const RootContainer = ({ children }) => {
 
   const getData = async () => {
     try {
-    const response = await fetch('./data/dataset.json')
-      .then(response => response.json())
+      const response = await fetch('./data/dataset.json')
+        .then(response => response.json())
       setData(response);
       localStorage.setItem('data', JSON.stringify(data));
     }
-    catch(ex) {
+    catch (ex) {
       console.log(ex)
 
       const savedData = localStorage.getItem('data');
@@ -32,7 +32,7 @@ const RootContainer = ({ children }) => {
   }
 
   return (
-    <RootContext.Provider value={{ data: data , activeSet: activeSet, setActiveSet: setActiveSet,working:working,setWorking:setWorking}}>
+    <RootContext.Provider value={{ data: data, activeSet: activeSet, setActiveSet: setActiveSet, working: working, setWorking: setWorking }}>
       {children}
     </RootContext.Provider>
   );

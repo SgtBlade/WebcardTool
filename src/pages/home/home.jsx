@@ -13,15 +13,15 @@ const Home = () => {
     return (
         <div className={style.container}>
 
-            <Menu/>
+            <Menu />
 
             <Routes>
-                <Route path={ROUTES.home.path} element={<Start/>} />
-                <Route path={ROUTES.flashcards.path} element={<Flashcards/>}/>
-                <Route path={ROUTES.quizz.path} element={<Quizz/>}/>
-                <Route path={'*'} element={<Start/>}/>
+                <Route path={ROUTES.home.path} element={<Start />} />
+                <Route path={ROUTES.flashcards.path} element={<Flashcards />} />
+                <Route path={ROUTES.quizz.path} element={<Quizz />} />
+                <Route path={'*'} element={<Start />} />
             </Routes>
-            
+
         </div>
     );
 };

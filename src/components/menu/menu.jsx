@@ -8,7 +8,7 @@ const Menu = () => {
 
     const [toggleMenu, setToggleMenu] = useState(false)
 
-    const { data, activeSet, setActiveSet, working} = useRootContext();
+    const { data, activeSet, setActiveSet, working } = useRootContext();
 
     const changeSet = (newItem) => {
         if (working) {
