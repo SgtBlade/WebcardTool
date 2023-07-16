@@ -1,6 +1,6 @@
 {
   "name": "webcardtool",
-  "homepage": "/flashcards",
+  "homepage": "webcardtool",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

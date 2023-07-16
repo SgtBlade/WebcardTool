@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import RootContainer from './contexts/rootContainer';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import Home from './pages/home/home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <RootContainer>
         <Home/>
       </RootContainer>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 

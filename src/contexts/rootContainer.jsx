@@ -13,12 +13,20 @@ const RootContainer = ({ children }) => {
 
   const getData = async () => {
     try {
-    const response = await fetch(process.env.REACT_APP_API_URL)
+    const response = await fetch('./data/dataset.json')
       .then(response => response.json())
-    setData(response);
+      setData(response);
+      localStorage.setItem('data', JSON.stringify(data));
     }
     catch(ex) {
       console.log(ex)
+
+      const savedData = localStorage.getItem('data');
+      if (savedData) {
+        const parsedData = JSON.parse(savedData);
+        setData(parsedData);
+      }
+
     }
 
   }
